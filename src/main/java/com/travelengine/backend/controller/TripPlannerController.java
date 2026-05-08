@@ -9,7 +9,10 @@ import reactor.core.publisher.Flux;
 @RestController
 @RequestMapping("/api/trips")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173") // Vite default port
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "https://ai-trip-frontend-628807958232.asia-south1.run.app"
+})
 public class TripPlannerController {
 
     private final TripService tripService;
